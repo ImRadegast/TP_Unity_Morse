@@ -23,11 +23,12 @@ public class spawnHorse : MonoBehaviour
 
     IEnumerator BrownHorseWave()
     {
-        while(true)
+        while(!brownHorse.isGameOver)
         {
             yield return new WaitForSeconds(respawnTime);
             SpawnHorse();
-
+            respawnTime -= 0.1f;
+            brownHorse.speed += 0.1f;
         }
     }
 }
