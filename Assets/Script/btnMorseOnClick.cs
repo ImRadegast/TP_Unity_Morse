@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class btnMorseOnClick : MonoBehaviour
 {
     [SerializeField]
-    public Text m_TextMeshPro;
+    private Text m_TextMeshPro;
     
 
     public void ShortClick()
