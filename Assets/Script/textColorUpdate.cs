@@ -40,7 +40,8 @@ public class textColorUpdate : MonoBehaviour
                 Debug.Log("----------");
                 Debug.Log("---OK !!!---");
                 Debug.Log("----------");
-                Destroy(theHorseChild);
+                GameObject parent = Entity.transform.GetChild(i).gameObject;
+                Destroy(parent);
                 Debug.Log("----------");
                 Debug.Log("--- Destroyed---");
                 Debug.Log("----------");
