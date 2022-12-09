@@ -8,6 +8,5 @@ public class btnRestart : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene("SampleScene");
-        print("toto");
     }
 }
