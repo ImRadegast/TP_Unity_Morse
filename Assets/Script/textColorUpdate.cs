@@ -7,20 +7,15 @@ using UnityEngine.UI;
 
 public class textColorUpdate : MonoBehaviour
 {
-     public Text m_TextMeshPro;
-     private Color baseColor = Color.white;
-     private Color ValidateColor = Color.cyan;
-     private GameObject Entity;
+    [SerializeField] private Text txtWritten;
+    [SerializeField] private Color baseColor = Color.white;
+    [SerializeField] private Color ValidateColor = Color.cyan;
+    [SerializeField] private GameObject Entity;
     // Start is called before the first frame update
 
 
-    public void UpdateStart()
-    {
-        if(m_TextMeshPro != null && Entity != null)
-        {
-            UpdateColor(m_TextMeshPro, baseColor, ValidateColor, Entity);
-        }
-    }
+  
+    
     public void UpdateColor(Text m_TextMeshPro, Color baseColor, Color ValidateColor, GameObject Entity)
     {
         
