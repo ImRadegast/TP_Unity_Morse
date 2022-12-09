@@ -11,14 +11,16 @@ public class textColorUpdate : MonoBehaviour
     [SerializeField] private Color baseColor = Color.white;
     [SerializeField] private Color ValidateColor = Color.cyan;
     [SerializeField] private GameObject Entity;
+    private Text textValide;
+    private Text textRemaining;
     // Start is called before the first frame update
 
 
   
     
-    public void UpdateColor(Text m_TextMeshPro, Color baseColor, Color ValidateColor, GameObject Entity)
+    public void UpdateColor()
     {
-        
+       
 
         //Parcour touts les Enfants de child
         for (int i = 0; i < Entity.transform.childCount; i++)
@@ -29,7 +31,19 @@ public class textColorUpdate : MonoBehaviour
 
             // Comment fire la correctin de caractere ?
             // achaque espace supprimer la partit ecrite et l'ecrire dans un text mesh au dessus ?
-            Console.WriteLine(i + "/" + Entity.transform.childCount);
+            Debug.Log((i+1) + "/" + Entity.transform.childCount);
+            Debug.Log("horse text " + text);
+            Debug.Log("montext "+ txtWritten.text);
+            Debug.Log("----------");
+
+
+            if (text == txtWritten.text)
+            {
+                Debug.Log("----------");
+                Debug.Log("---OK !!!---");
+                Debug.Log("----------");
+                txtWritten.color = ValidateColor;
+            }
             
         }
        
