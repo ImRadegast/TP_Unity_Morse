@@ -20,20 +20,18 @@ public class textColorUpdate : MonoBehaviour
     
     public void UpdateColor()
     {
-       
-
         //Parcour touts les Enfants de child
         for (int i = 0; i < Entity.transform.childCount; i++)
         {
             GameObject theHorseChild = Entity.transform.GetChild(i).transform.Find("text").gameObject;
-          
+
             string text = theHorseChild.GetComponent<TextMeshPro>().text;
 
             // Comment fire la correctin de caractere ?
             // achaque espace supprimer la partit ecrite et l'ecrire dans un text mesh au dessus ?
-            Debug.Log((i+1) + "/" + Entity.transform.childCount);
+            Debug.Log((i + 1) + "/" + Entity.transform.childCount);
             Debug.Log("horse text " + text);
-            Debug.Log("montext "+ txtWritten.text);
+            Debug.Log("montext " + txtWritten.text);
             Debug.Log("----------");
 
 
@@ -42,11 +40,11 @@ public class textColorUpdate : MonoBehaviour
                 Debug.Log("----------");
                 Debug.Log("---OK !!!---");
                 Debug.Log("----------");
-                txtWritten.color = ValidateColor;
+                Destroy(theHorseChild);
+                Debug.Log("----------");
+                Debug.Log("--- Destroyed---");
+                Debug.Log("----------");
             }
-            
         }
-       
     }
-
 }
