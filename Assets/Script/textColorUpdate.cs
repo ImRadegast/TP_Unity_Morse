@@ -29,22 +29,13 @@ public class textColorUpdate : MonoBehaviour
 
             // Comment fire la correctin de caractere ?
             // achaque espace supprimer la partit ecrite et l'ecrire dans un text mesh au dessus ?
-            Debug.Log((i + 1) + "/" + Entity.transform.childCount);
-            Debug.Log("horse text " + text);
-            Debug.Log("montext " + txtWritten.text);
-            Debug.Log("----------");
+           
 
 
             if (text == txtWritten.text)
             {
-                Debug.Log("----------");
-                Debug.Log("---OK !!!---");
-                Debug.Log("----------");
                 GameObject parent = Entity.transform.GetChild(i).gameObject;
                 Destroy(parent);
-                Debug.Log("----------");
-                Debug.Log("--- Destroyed---");
-                Debug.Log("----------");
             }
         }
     }

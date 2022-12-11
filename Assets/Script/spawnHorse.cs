@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class spawnHorse : MonoBehaviour
 {
-    public GameObject brownHorsePrefab;
+    [SerializeField] private GameObject[] HorsePrefab;
+    [SerializeField] private GameObject[] spawnAnchor;
+
     public float respawnTime = 1.0f;
     private Vector2 screenBounds;
 
@@ -17,8 +19,12 @@ public class spawnHorse : MonoBehaviour
 
     private void SpawnHorse ()
     {
-        GameObject a = Instantiate(brownHorsePrefab) as GameObject;
-        a.transform.position = new Vector2(-10, -3.5f);
+        //Choisis aléatoirement une couleur de cheval
+        int randomHorseColor = Random.Range(0, HorsePrefab.Length);
+        int randomSpawnAnchor = Random.Range(0, spawnAnchor.Length);
+        
+        GameObject a = Instantiate(HorsePrefab[randomHorseColor], spawnAnchor[randomSpawnAnchor].transform) as GameObject;
+        
     }
 
     IEnumerator BrownHorseWave()
