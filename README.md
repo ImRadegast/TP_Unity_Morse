@@ -2,4 +2,4 @@
 
 Projets actuellement en Pause.
 
-Projets permettant da'pprendre facilement le code morse via de nombreux jeux multijoueur ludique et amusant 
+Projets ayant pour but d'apprendre facilement le code morse via de nombreux jeux multijoueur ludique et amusant 
